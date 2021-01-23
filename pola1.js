@@ -14,39 +14,14 @@ process.stdin.on('readable', () => {
     } else { 
     var wall = "@";
     var path = " ";
-    function pola1(i,x,S){
-        // result = wall
-        // for (j=1;j<S;j++){
-        //     if (x%4 == 0){
-        //         if (j==1){
-        //             result += path;
-        //         }
-        //         else {
-        //             result += wall;
-        //         }
-        //     } else if (x%4 == 2){
-        //         if (j==S-2){
-        //             result += path;
-        //         }
-        //         else{
-        //             result +=wall;
-        //         }
-        //     } else {
-        //         if (j==S-1){
-        //             result += wall;
-        //         }
-        //         else {
-        //             result += path;
-        //         }
-        //     }
-        // }
-            if (x%4 == 0){
-                result = "@ "+"@".repeat(S-2)
-            } else if (x%4 == 2){
-                result = "@".repeat(S-2) + " @"
-            } else {
-                result = "@" + " ".repeat(S-2) + "@"
-            }
+    function pola1(i,x,S){    
+        if (x%4 == 0){
+            result = "@ "+"@".repeat(S-2)
+        } else if (x%4 == 2){
+            result = "@".repeat(S-2) + " @"
+        } else {
+            result = "@" + " ".repeat(S-2) + "@"
+        }
         return result
     }
 
