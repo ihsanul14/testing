@@ -16,11 +16,11 @@ process.stdin.on('readable', () => {
     var path = " ";
     function pola1(i,x,S){    
         if (x%4 == 0){
-            result = "@ "+"@".repeat(S-2)
+            result = "@ "+wall.repeat(S-2)
         } else if (x%4 == 2){
-            result = "@".repeat(S-2) + " @"
+            result = wall.repeat(S-2) + " @"
         } else {
-            result = "@" + " ".repeat(S-2) + "@"
+            result = wall + path.repeat(S-2) + "@"
         }
         return result
     }
