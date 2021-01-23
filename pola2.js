@@ -21,17 +21,17 @@ if (n <2){
 function upper(i,S){
     result = "@ "
     if (i == 0){
-        result += "@".repeat(S-2)
+        result += wall.repeat(S-2)
     }else if ((i%2 == 0) && (i!=0)){
         result += "@ ".repeat(i/2)
         len = result.length
-        result += "@".repeat(S-(len)-i)
+        result += wall.repeat(S-(len)-i)
         len = result.length
         result += " @".repeat((S-len)/2)
     }else {
         result += "@ ".repeat((i/2)+1)
         len = result.length
-        result += " ".repeat(S-len-(i+1))
+        result += path.repeat(S-len-(i+1))
         len = result.length
         result += " @".repeat((S-len)/2)
     }
@@ -43,16 +43,16 @@ function middler(middle){
 function lower(i,S){
     result = "@ "
     if (i == S-1){
-        result = "@".repeat(S)
+        result = wall.repeat(S)
     }else if (i%2 == 0){
         result = "@ ".repeat(((S-i)/2))
         len = result.length
-        result += "@".repeat((S-(len*2)))
+        result += wall.repeat((S-(len*2)))
         result += " @".repeat((S-i)/2)
     }else {
         result = "@ ".repeat(((S-i)/2))
         len = result.length
-        result += " ".repeat((S-(len*2)))
+        result += path.repeat((S-(len*2)))
         result += " @".repeat((S-i)/2)
     }
     return result
