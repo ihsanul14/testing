@@ -19,24 +19,24 @@ process.stdin.on('readable', () => {
         for (j=1;j<S;j++){
             if (x%4 == 0){
                 if (j==1){
-                    result = result + path;
+                    result += path;
                 }
                 else {
-                    result = result + wall;
+                    result += wall;
                 }
             } else if (x%4 == 2){
                 if (j==S-2){
-                    result = result + path;
+                    result += path;
                 }
                 else{
-                    result= result +wall;
+                    result +=wall;
                 }
             } else {
                 if (j==S-1){
-                    result = result + wall;
+                    result += wall;
                 }
                 else {
-                    result= result + path;
+                    result += path;
                 }
             }
         }
